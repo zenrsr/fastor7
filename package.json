@@ -1,0 +1,30 @@
+{
+  "name": "fastor7",
+  "version": "1.0.0",
+  "description": "Fastor CRM backend assignment implementation.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "lint": "echo \"TODO: add linting\" && exit 0",
+    "test": "cross-env NODE_ENV=test DB_STORAGE=./crm_db.test.sqlite jest --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}
