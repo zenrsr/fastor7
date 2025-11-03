@@ -102,7 +102,6 @@ const claimEnquiry = async (req, res) => {
   }
 };
 
-// TODO: add bulk assignment workflow once product confirms the rules.
 
 module.exports = {
   createPublicEnquiry,
