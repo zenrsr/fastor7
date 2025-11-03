@@ -31,6 +31,28 @@ Run the Jest/Supertest suite against an isolated SQLite file:
 npm test
 ```
 
+### Live deployment smoke test
+
+To exercise the Render deployment directly:
+
+```bash
+LIVE_BASE_URL=your-live-production-url npm test
+```
+
+The `tests/liveSmoke.test.js` file only runs when `LIVE_BASE_URL` is set. Optional tuning variables:
+
+- `LIVE_WAIT_MS` – delay between warm-up retries (default 5000 ms)
+- `LIVE_MAX_ATTEMPTS` – number of warm-up attempts before failing (default 8)
+
+Example with custom timing:
+
+```bash
+LIVE_BASE_URL=your-live-production-url \
+LIVE_WAIT_MS=3000 \
+LIVE_MAX_ATTEMPTS=12 \
+npm test
+```
+
 ## Render Deployment Checklist
 
 1. **Environment variables**
